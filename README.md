@@ -18,7 +18,8 @@ time consuming. Here I present a machine-learning based approach to identify pro
 The following figure shows the difference of protein folding signals from nonspecific signals: 
 
 
-![Figure 1 protein vs non-signals](https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/SNARE_sig_nosig_10ms.png | width=30)
+![](https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/SNARE_sig_nosig_10ms.png | width=30)
+<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/SNARE_sig_nosig_10ms.png width="48">
 
 
 I implemented and evaluated several different classifiers, including logistic regression, k-nearest neighbors and SVM,
