@@ -41,4 +41,4 @@ def draw_ROC(train_X, train_Y, classifier, figname):
 	plt.title('Receiver operating characteristic example')
 	plt.legend(loc="lower right")
 	plt.show()
-	fig.savefig("figname")
+	fig.savefig(figname)
