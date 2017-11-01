@@ -19,7 +19,7 @@ The following figure shows the difference of protein folding signals from nonspe
 
 
 
-<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/SNARE_sig_nosig_10ms.png width="50">
+<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/SNARE_sig_nosig_10ms.png >
 
 
 I implemented and evaluated several different classifiers, including logistic regression, k-nearest neighbors and SVM,
