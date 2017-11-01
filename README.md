@@ -34,12 +34,18 @@ This may result from the high-dimension feature space of my input data.
 4. To use SVM classifer, use the command `python SVM.py \path\to\data`
 5. Two matlab scripts were used to extract features from the raw matlab data files.
 
+
+
 # Implementation details
 
 Cross validation were used to select key paremeters or hyper paremeters. For example k in KNN and C in SVM. 
 Usually a ROC curve was generated using cross validation to give you a sense of your classifier.
 The programs will also print out the predicted results for your test cases. 
 
+
+The following figures shows a ROC example of using SVM to classify protein folding signals.
+
+<img:src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/ROC_SVM_withCV_C_gamma.png>
 #directory-structure
 Put your training_positive data in path: `data/training_sig`
 Put your training_neg data in path: `data/training_nonsig`
