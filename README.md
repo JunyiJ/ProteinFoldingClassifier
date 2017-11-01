@@ -45,7 +45,10 @@ The programs will also print out the predicted results for your test cases.
 
 The following figures shows a ROC example of using SVM to classify protein folding signals.
 
-<img:src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/ROC_SVM_withCV_C_gamma.png>
+<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/ROC_SVM_withCV_C_gamma.png>
+
+
+
 #directory-structure
 Put your training_positive data in path: `data/training_sig`
 Put your training_neg data in path: `data/training_nonsig`
