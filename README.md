@@ -15,6 +15,11 @@ In single-molecule force spectrometry study, noise to signal ratio can be very h
 signals are from protein folding and the rest signals are non-specific signals. Manually going through the signals can be
 time consuming. Here I present a machine-learning based approach to identify protein folding signals from non-signals.
 
+The following figure shows the difference of protein folding signals from nonspecific signals: 
+
+![alt text][fig1]
+
+[fig1]: https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/SNARE_sig_nosig_10ms.png "Logo Title Text 2"
 
 I implemented and evaluated several different classifiers, including logistic regression, k-nearest neighbors and SVM,
 based on recall of test and ROC curves. SVM usually has the best performance under different conditions. 
