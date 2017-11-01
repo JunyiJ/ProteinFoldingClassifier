@@ -38,7 +38,6 @@ def draw_ROC(train_X, train_Y, classifier, figname):
 	plt.ylim([-0.05, 1.05])
 	plt.xlabel('False Positive Rate')
 	plt.ylabel('True Positive Rate')
-	plt.title('Receiver operating characteristic example')
 	plt.legend(loc="lower right")
 	plt.show()
 	fig.savefig(figname)
