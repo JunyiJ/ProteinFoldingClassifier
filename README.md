@@ -6,11 +6,11 @@
 5. [Directory structure](README.md#directory-structure)
 
 
-# Prerequisites
+## Prerequisites
 
 Python 2 and the following packages: numpy, scipy, sklearn, matplotlab
 
-# Aim
+## Aim
 In single-molecule force spectrometry study, noise to signal ratio can be very high. In other words, only 30%~50% collected
 signals are from protein folding and the rest signals are non-specific signals. Manually going through the signals can be
 time consuming. Here I present a machine-learning based approach to identify protein folding signals from non-signals.
@@ -26,7 +26,7 @@ I implemented and evaluated several different classifiers, including logistic re
 based on recall of test and ROC curves. SVM usually has the best performance under different conditions. 
 This may result from the high-dimension feature space of my input data.
 
-# How to use
+## How to use
 
 1. To use logistic regression, use command `python logistic_regression.py \path\to\data\`
 2. To use k nearest neighbors classifier , use command `python KNN.py \path\to\data\`
@@ -36,7 +36,7 @@ This may result from the high-dimension feature space of my input data.
 
 
 
-# Implementation details
+## Implementation details
 
 Cross validation were used to select key paremeters or hyper paremeters. For example k in KNN and C in SVM. 
 Usually a ROC curve was generated using cross validation to give you a sense of your classifier.
@@ -49,7 +49,7 @@ The following figures shows a ROC example of using SVM to classify protein foldi
 
 
 
-#directory-structure
+## Directory-structure
 Put your training_positive data in path: `data/training_sig`
 Put your training_neg data in path: `data/training_nonsig`
 Put your test_positive data in path: `data/test_sig`
