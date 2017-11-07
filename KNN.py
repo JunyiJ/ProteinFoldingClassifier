@@ -59,6 +59,7 @@ if __name__=="__main__":
 		#Using cross validation to get a good k value
 		neighbors = [x for x in range(1,15,2)]
 		goodneighbor = cross_validation_k(train_X, train_Y, neighbors, join(data_path, "CV_KNN_k"))
+		
 		#train the model with selected K value
 		KNN = KNeighborsClassifier(n_neighbors=goodneighbor)
 		KNN.fit(train_X, train_Y)	
@@ -66,6 +67,6 @@ if __name__=="__main__":
 		print "predicted result using neighbor=%d:\n" %(goodneighbor),predicted
 		print "expected results\n",test_Y.flatten("C")
 		print("Classification report for classifier %s:\n%s\n" % (KNN, metrics.classification_report(test_Y, predicted)))
-
+		draw_ROC(train_X, train_Y, KNN, join(data_path, "ROC_KNN"))
 
 

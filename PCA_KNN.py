@@ -15,7 +15,6 @@ from sklearn.decomposition import PCA
 from data_process import data_process
 from roc import draw_ROC
 
-
 	
 def cross_validation_k(train_X, train_Y, neighbors, figpath):
 	#find the best k value from neighbors using cross validation
@@ -53,7 +52,7 @@ if __name__=="__main__":
 	else:
 		root = dirname(abspath(__file__))
 		data_path = join(root,sys.argv[1])
-		print data_path
+		#print data_path
 		train_pos = join(data_path,"trainning_sig/")
 		train_neg = join(data_path,"trainning_nonsig/")
 		test_pos = join(data_path,"test_sig/")
@@ -74,6 +73,7 @@ if __name__=="__main__":
 		KNN = KNeighborsClassifier(n_neighbors=goodneighbor)
 		KNN.fit(train_Xt, train_Y)	
 		predicted = KNN.predict(test_Xt)
+		
 		print "predicted result using neighbor=%d:\n" %(goodneighbor),predicted
 		print "expected results\n",test_Y.flatten("C")
 		print("Classification report for classifier %s:\n%s\n" % (KNN, metrics.classification_report(test_Y, predicted)))

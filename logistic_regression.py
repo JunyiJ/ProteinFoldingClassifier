@@ -14,7 +14,7 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LogisticRegression
 from data_process import data_process
 from roc import draw_ROC
-
+from precision_recall import draw_precision_recall
 
 	
 
@@ -32,17 +32,17 @@ if __name__=="__main__":
 		train_neg = join(data_path,"trainning_nonsig/")
 		test_pos = join(data_path,"test_sig/")
 		test_neg = join(data_path,"test_nonsig/")
-		
 		train_X,train_Y = data_process([train_neg, train_pos])
 		test_X,test_Y = data_process([test_neg, test_pos])
 		#Using PCA to transform the data
-		logistic = LogisticRegression(penalty='l2')		
+		logistic = LogisticRegression(penalty='l1')		
 		logistic.fit(train_X, train_Y)	
 		predicted = logistic.predict(test_X)
+		draw_precision_recall(logistic, test_X, test_Y, join(data_path, "PR_Logistic_l1"))
 		print "predicted result",predicted
 		print "expected results\n",test_Y.flatten("C")
 		print("Classification report for classifier %s:\n%s\n" % (logistic, metrics.classification_report(test_Y, predicted)))
-		draw_ROC(train_X, train_Y, logistic, join(data_path,"ROC_logistic_l2"))
+		draw_ROC(train_X, train_Y, logistic, join(data_path, "ROC_logistic_l1"))
 		
 
 
