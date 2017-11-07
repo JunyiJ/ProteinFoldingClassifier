@@ -18,6 +18,8 @@ this single-molecule method allows us to hold two ends of a single protein molec
 to unfold the protein by pulling two ends of the protein and allow protein to spontaneouly refold by relaxing. We 
 record **force** and **extension** in this process, which tells us the stability and folding status of the protein.
 
+<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/protein_folding.gif>
+
 When protein is structured, the distance (**extension**) between two pulling ends are smaller compared to 
 unstructured protein (see the following figure).
 
