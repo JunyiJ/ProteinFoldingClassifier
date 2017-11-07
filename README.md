@@ -11,13 +11,21 @@
 Python 2 and the following packages: numpy, scipy, sklearn, matplotlab
 
 ## Aim
+
+Function of proteins greatly depend on their dynamic structural changes, also known as folding process. 
+The dynamic protein folding process can be studied using single-molecule force spectrometry. Basically,
+this single-molecule method allows us to hold two ends of a single protein molecule. We can apply force 
+to unfold the protein by pulling two ends and allow protein to spontaneouly refold by relax two ends. We 
+record **force** and **extension** in this process, which tells us the stability and folding status of the protein.
+When protein is structured, the distance (**extension**) between two pulling ends are smaller compared to 
+unstructured protein.
+
+
 In single-molecule force spectrometry study, noise to signal ratio can be very high. In other words, only 30%~50% collected
 signals are from protein folding and the rest signals are non-specific signals. Manually going through the signals can be
 time consuming. Here I present a machine-learning based approach to identify protein folding signals from non-signals.
 
 The following figure shows the difference of protein folding signals from nonspecific signals: 
-
-
 
 <img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/SNARE_sig_nosig_10ms.png >
 
