@@ -62,7 +62,7 @@ The programs will also print out the predicted results for your test cases.
 
 The following figures shows a ROC example of using SVM to classify protein folding signals.
 
-<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/ROC_SVM.png>
+<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/ROC_SVM.png width="400">
 
 
 
