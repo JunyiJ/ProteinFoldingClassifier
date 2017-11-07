@@ -12,15 +12,18 @@ Python 2 and the following packages: numpy, scipy, sklearn, matplotlab
 
 ## Aim
 
-Function of proteins greatly depend on their dynamic structural changes, also known as folding process. 
-The dynamic protein folding process can be studied using single-molecule force spectrometry. Basically,
+Function of proteins greatly depend on their dynamic structural changes, also known as folding. 
+The dynamic protein folding can be studied using single-molecule force spectrometry. Basically,
 this single-molecule method allows us to hold two ends of a single protein molecule. We can apply force 
-to unfold the protein by pulling two ends and allow protein to spontaneouly refold by relax two ends. We 
+to unfold the protein by pulling two ends of the protein and allow protein to spontaneouly refold by relaxing. We 
 record **force** and **extension** in this process, which tells us the stability and folding status of the protein.
+
 When protein is structured, the distance (**extension**) between two pulling ends are smaller compared to 
-unstructured protein.
+unstructured protein (see the following figure).
 
 <img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/Optical_tweezer_figure.png width="450">
+
+
 
 In single-molecule force spectrometry study, noise to signal ratio can be very high. In other words, only 30%~50% collected
 signals are from protein folding and the rest signals are non-specific signals. Manually going through the signals can be
@@ -34,6 +37,9 @@ The following figure shows the difference of protein folding signals from nonspe
 I implemented and evaluated several different classifiers, including logistic regression, k-nearest neighbors and SVM,
 based on recall of test and ROC curves. SVM usually has the best performance under different conditions. 
 This may result from the high-dimension feature space of my input data.
+
+
+Although this project aims to classify protein folding signals, the scripts also apply to other classification problems
 
 ## How to use
 
