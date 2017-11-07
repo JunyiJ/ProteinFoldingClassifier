@@ -20,7 +20,7 @@ record **force** and **extension** in this process, which tells us the stability
 When protein is structured, the distance (**extension**) between two pulling ends are smaller compared to 
 unstructured protein.
 
-<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/Optical_tweezer_figure.png width="300">
+<img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/Optical_tweezer_figure.png width="450">
 
 In single-molecule force spectrometry study, noise to signal ratio can be very high. In other words, only 30%~50% collected
 signals are from protein folding and the rest signals are non-specific signals. Manually going through the signals can be
