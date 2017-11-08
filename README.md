@@ -20,6 +20,8 @@ record **force** and **extension** in this process, which tells us the stability
 
 <img src=https://github.com/JunyiJ/ProteinFoldingClassifier/blob/master/other/protein_folding.gif>
 
+(Figure provides by Junyi Jiao and Helen He)
+
 When protein is structured, the distance (**extension**) between two pulling ends are smaller compared to 
 unstructured protein (see the following figure).
 
