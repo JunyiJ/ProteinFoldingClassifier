@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-Python 2 and the following packages: numpy, scipy, sklearn, matplotlab
+Python 2 and numpy, scipy, sklearn, matplotlab
 
 ## Aim
 
