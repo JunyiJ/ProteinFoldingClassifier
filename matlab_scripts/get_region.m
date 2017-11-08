@@ -3,24 +3,28 @@ function get_region(filename,t_ex,dt)
 % trajectories for further data analysis.
 % filename
 % t_ex:   The time region to be excluded. t(1) start; t(2) end
-% dt: Time interval in the data file in second.
+% dt: Time interval in the data file in ms.
 %  get_region ('JUN1616_S0', [0,40],0.2e-3)
-
+close all;
 load(filename)
-index=false(size(av.d.time));
-m=dt./mean(diff(av.d.time(1:10)));
-ind=av.d.time>t_ex(1) & av.d.time<t_ex(2);
+[th, ext, force, trap_sep, Avt]=tweezer_filter(filename,dt);
+index=false(size(th));
+if max(th)<t_ex(2)
+    return
+end
+ind=th>t_ex(1) & th<t_ex(2);
 index(ind)=true;
-
-av.d.time=av.d.time(index);
-av.d.avforce=av.d.avforce(index);
-av.d.trapsep=av.d.trapsep(index);
-av.ac.ext=av.ac.ext(index);
-ext_min=min(av.ac.ext);
-ext_1=av.ac.ext-ext_min;
-EXT_FORCE=[ext_1,av.d.avforce];
+Force=force(index);
+Ext=ext(index);
+ext_min=min(Ext);
+ext_1=Ext-ext_min;
+EXT_FORCE=[ext_1,Force];
 newfilename=[filename '_nonsig'];
-plot(ext_1,force_1,ext_1,forcen{ns});
+plot(ext_1,Force);
+xlabel('DNA extension (nm)');
+ylabel('Force (pN)');
+title([filename ', Force-extension' ', Average time= ' num2str(Avt) ' ms']);
+saveas(gcf,[newfilename,'.png']);
 save(newfilename,'basefilename', 'EXT_FORCE')
 disp('Data excluding the following regions')
 disp(t_ex)
